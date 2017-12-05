@@ -1,4 +1,9 @@
-<input type="text" [(ngModel)]="name" >
-<input type="text" [(ngModel)]="grossIncomeAmount" >
+<div class="wrapper">
 
-<p> Hello, {{name}}, you will be earning {{grossIncomeAmount}} </p>
+  <nav id="sidebar">
+    <app-side-bar-menu>Menu Loading ...</app-side-bar-menu>
+  </nav>
+  <div id="content">
+    <app-movie-manager></app-movie-manager>
+  </div>
+</div>
