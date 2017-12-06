@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieManagerComponent implements OnInit {
 
+  name = 'hello';
   constructor() { }
 
   ngOnInit() {
