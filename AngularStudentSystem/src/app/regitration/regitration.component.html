@@ -1,0 +1,47 @@
+<form role="form">
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="firstName" type="text" [(ngModel)]="firstName" class="form-control input-sm" placeholder="First Name">
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="lastName"  type="text" [(ngModel)]="lastName" class="form-control input-sm" placeholder="Last Name">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="email" type="email" [(ngModel)]="emailAddress" class="form-control input-sm" placeholder="Email Address">
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="studentNumber" type="text" [(ngModel)]="studentNumber" class="form-control input-sm"
+               placeholder="Student Number" disabled>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="facultyName" type="text" [(ngModel)]="facultyName" class="form-control input-sm" placeholder="Faculty Name">
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <input name="degreeName" type="text" [(ngModel)]="degreeName" class="form-control input-sm"
+               placeholder="Degree Name">
+      </div>
+    </div>
+  </div>
+
+  <input type="button" value="Register" class="btn btn-info btn-block" (click)="registerStudent()">
+
+</form>
