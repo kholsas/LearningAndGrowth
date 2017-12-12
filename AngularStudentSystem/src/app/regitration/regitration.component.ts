@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {StudentListingComponent} from '../student-listing/student-listing.component';
 import {Person} from '../Person';
+import {StudentService} from '../StudentService';
+import {StudentListingComponent} from '../student-listing/student-listing.component';
 
 @Component({
   selector: 'app-regitration',
@@ -9,11 +10,13 @@ import {Person} from '../Person';
 })
 export class RegitrationComponent implements OnInit {
 
-  private _studentListingComponent = new StudentListingComponent();
+
   private student: Person = new Person();
 
-  constructor() {
+  constructor(private studentService: StudentService,
+              private studentListingComp: StudentListingComponent) {
   }
+
 
   ngOnInit() {
   }
@@ -21,9 +24,7 @@ export class RegitrationComponent implements OnInit {
 
   public registerStudent() {
     this.student.studentNumber = this.getStudentNumber();
-    this._studentListingComponent.registerStudent(this.student);
-    /*this.student.firstName, this.student.lastName,
-      this.student.emailAddress, this.student.studentNumber, this.student.facultyName, this.student.degreeName*/
+    this.studentListingComp.registerStudent(this.student);
   }
 
   private getStudentNumber() {
