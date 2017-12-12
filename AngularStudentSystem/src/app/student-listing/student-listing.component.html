@@ -10,12 +10,18 @@
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
+        <th>Student Number</th>
+        <th>Faculty Name</th>
+        <th>Degree Name</th>
       </tr>
       <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+      <tr *ngFor="let student of registeredStudents">
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.emailAddress}}</td>
+        <td>{{student.studentNumber}}</td>
+        <td>{{student.facultyName}}</td>
+        <td>{{student.degreeName}}</td>
       </tr>
       </tbody>
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Person} from '../Person';
 
 @Component({
   selector: 'app-student-listing',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentListingComponent implements OnInit {
 
-  constructor() { }
+
+  registeredStudents: Array<Person> = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  public registerStudent(student: Person) {
+
+    this.registeredStudents.push(student);
+
+    console.log(this.registeredStudents[0]);
+  }
 }
