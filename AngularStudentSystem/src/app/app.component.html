@@ -1,20 +1,10 @@
 <div class="container">
+  <app-header></app-header>
+  <hr>
 
-  <div class="row">
-    <div class="panel-heading">
-      <h3 class="panel-title">Student Registration
-        <small>Form</small>
-      </h3>
-    </div>
-
-    <div class="panel-body">
-      <div class="col-lg-6">
-        <app-regitration>Loading Form ...</app-regitration>
-      </div>
-
-      <div class="col-lg-6">
-        <app-student-listing>List Loading ...</app-student-listing>
-      </div>
+  <div class="panel-body">
+    <div class="row">
+      <router-outlet></router-outlet>
     </div>
 
   </div>

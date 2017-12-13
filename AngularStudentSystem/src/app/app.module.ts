@@ -7,6 +7,8 @@ import {RegistrationComponent} from './regitration/regitration.component';
 import {StudentListingComponent} from './student-listing/student-listing.component';
 import {FormsModule} from '@angular/forms';
 import {CollactableService} from './shared/collactable.service';
+import { HeaderComponent } from './header.component';
+import {routing} from './app.routing';
 
 
 @NgModule({
@@ -14,10 +16,12 @@ import {CollactableService} from './shared/collactable.service';
     AppComponent,
     RegistrationComponent,
     StudentListingComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [CollactableService],
   bootstrap: [AppComponent]
