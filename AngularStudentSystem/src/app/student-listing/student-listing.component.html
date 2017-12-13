@@ -13,6 +13,7 @@
         <th>Student Number</th>
         <th>Faculty Name</th>
         <th>Degree Name</th>
+        <th>Delete</th>
       </tr>
       <tbody>
       <tr *ngFor="let student of registeredStudents">
@@ -22,6 +23,7 @@
         <td>{{student.studentNumber}}</td>
         <td>{{student.facultyName}}</td>
         <td>{{student.degreeName}}</td>
+        <td><a href="#" (click)="deleteStudent(student)">Delete</a></td>
       </tr>
       </tbody>
 

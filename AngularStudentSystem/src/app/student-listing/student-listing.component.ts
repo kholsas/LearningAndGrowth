@@ -21,4 +21,7 @@ export class StudentListingComponent implements OnInit {
     this.registeredStudents = this.collectableService.getCollectables();
   }
 
+  deleteStudent(student: Person) {
+    this.collectableService.removeStudent(student);
+  }
 }

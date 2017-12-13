@@ -19,4 +19,9 @@ export class CollactableService {
 
     this.registeredStudents.push(person);
   }
+
+  removeStudent(student: Person) {
+   const studentInCollection =  this.registeredStudents.find(person => person.studentNumber === student.studentNumber);
+   this.registeredStudents.splice(this.registeredStudents.indexOf(studentInCollection), 1);
+  }
 }
