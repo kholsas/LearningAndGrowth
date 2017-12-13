@@ -3,23 +3,23 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {RegitrationComponent} from './regitration/regitration.component';
+import {RegistrationComponent} from './regitration/regitration.component';
 import {StudentListingComponent} from './student-listing/student-listing.component';
 import {FormsModule} from '@angular/forms';
-import {StudentService} from './StudentService';
+import {CollactableService} from './shared/collactable.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegitrationComponent,
-    StudentListingComponent
+    RegistrationComponent,
+    StudentListingComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [StudentService, StudentListingComponent],
+  providers: [CollactableService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

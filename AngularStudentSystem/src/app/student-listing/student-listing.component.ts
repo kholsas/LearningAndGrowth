@@ -1,6 +1,6 @@
 import {Component, Injectable, OnInit} from '@angular/core';
-import {Person} from '../Person';
-import {StudentService} from '../StudentService';
+import {Person} from '../shared/Person';
+import {CollactableService} from '../shared/collactable.service';
 
 @Component({
   selector: 'app-student-listing',
@@ -11,17 +11,14 @@ import {StudentService} from '../StudentService';
 @Injectable()
 export class StudentListingComponent implements OnInit {
 
+  registeredStudents: Person[] = [];
 
-  constructor(private studentService: StudentService) {
+  constructor(private collectableService: CollactableService) {
+
   }
 
   ngOnInit() {
+    this.registeredStudents = this.collectableService.getCollectables();
   }
 
-  public registerStudent(student: Person) {
-
-    this.studentService.registeredStudents.push(student);
-
-    console.log(this.studentService.registeredStudents[0]);
-  }
 }

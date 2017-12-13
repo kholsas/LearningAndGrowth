@@ -27,7 +27,8 @@ public class MongoConnect {
 
         MongoDatabase database = mongoClient.getDatabase("myDb");
         System.out.println("Credentials ::" + credential);
-//        database.createCollection("People");
+
+
         MongoCollection<Document> collection = database.getCollection("myCollection");
         System.out.println("Collection retrieved! NameSpace : " + collection.getNamespace());
 

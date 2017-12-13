@@ -1,30 +1,32 @@
 import {Component, OnInit} from '@angular/core';
-import {Person} from '../Person';
-import {StudentService} from '../StudentService';
-import {StudentListingComponent} from '../student-listing/student-listing.component';
+import {Person} from '../shared/Person';
+import {CollactableService} from '../shared/collactable.service';
 
 @Component({
   selector: 'app-regitration',
   templateUrl: './regitration.component.html',
   styleUrls: ['./regitration.component.css']
 })
-export class RegitrationComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
 
 
-  private student: Person = new Person();
+  student: Person = new Person();
+  collectables = [];
 
-  constructor(private studentService: StudentService,
-              private studentListingComp: StudentListingComponent) {
+  constructor(private collectableService: CollactableService) {
   }
 
 
   ngOnInit() {
+    this.collectables = this.collectableService.getCollectables();
   }
 
 
   public registerStudent() {
+
     this.student.studentNumber = this.getStudentNumber();
-    this.studentListingComp.registerStudent(this.student);
+    this.collectableService.addStudent(this.student.firstName, this.student.lastName,
+      this.student.emailAddress, this.student.studentNumber, this.student.facultyName, this.student.degreeName);
   }
 
   private getStudentNumber() {
