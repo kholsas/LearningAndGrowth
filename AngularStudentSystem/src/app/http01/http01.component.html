@@ -1,0 +1,12 @@
+<div class="row">
+  <ul class="list-group table-striped">
+
+    <li class="list-group-item" *ngFor="let post of arrayOfPosts">
+      <div class="bg-info">
+        <label class="label-success">{{post.title}}</label> <br>
+        <span> {{post.body}}</span>
+      </div>
+    </li>
+
+  </ul>
+</div>
